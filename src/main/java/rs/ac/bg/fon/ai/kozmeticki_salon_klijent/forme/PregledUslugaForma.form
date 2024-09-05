@@ -167,7 +167,7 @@
               <Font name="Century Gothic" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/forme/resources/search.png"/>
+              <Image iconType="3" name="/search.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Pretrazi"/>
           </Properties>
@@ -204,7 +204,7 @@
           <Font name="Century Gothic" size="12" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/forme/resources/add.png"/>
+          <Image iconType="3" name="/add.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Dodaj novu uslugu"/>
       </Properties>
@@ -215,7 +215,7 @@
           <Font name="Century Gothic" size="12" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/forme/resources/info.png"/>
+          <Image iconType="3" name="/info.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="   Detalji o usluzi"/>
       </Properties>

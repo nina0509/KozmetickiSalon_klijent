@@ -104,7 +104,7 @@ public class DodajRezervacijuForma extends javax.swing.JFrame {
         jLabel10.setText("Usluga");
 
         jButtonDodajStavku.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonDodajStavku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/add.png"))); // NOI18N
+        jButtonDodajStavku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButtonDodajStavku.setText("Dodaj stavku");
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -172,7 +172,7 @@ public class DodajRezervacijuForma extends javax.swing.JFrame {
         );
 
         jButtonObrisiStavku.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonObrisiStavku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/delete.png"))); // NOI18N
+        jButtonObrisiStavku.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete.png"))); // NOI18N
         jButtonObrisiStavku.setText("Obrisi oznacenu stavku");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -189,7 +189,7 @@ public class DodajRezervacijuForma extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,7 +226,7 @@ public class DodajRezervacijuForma extends javax.swing.JFrame {
         jLabel13.setText("Podaci o rezervaciji");
 
         jButtonDodajRezervaciju.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonDodajRezervaciju.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/add.png"))); // NOI18N
+        jButtonDodajRezervaciju.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButtonDodajRezervaciju.setText("Sacuvaj rezervaciju");
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -276,11 +276,11 @@ public class DodajRezervacijuForma extends javax.swing.JFrame {
         jLabelId.setText("Id");
 
         jButtonAzuriraj.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonAzuriraj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/update.png"))); // NOI18N
+        jButtonAzuriraj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/update.png"))); // NOI18N
         jButtonAzuriraj.setText("Azuriraj rezervaciju");
 
         jButtonObrisi.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonObrisi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/delete.png"))); // NOI18N
+        jButtonObrisi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete.png"))); // NOI18N
         jButtonObrisi.setText("Obrisi rezervaciju");
 
         jLabelDolazak.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -370,9 +370,11 @@ public class DodajRezervacijuForma extends javax.swing.JFrame {
                 .addGap(7, 7, 7)
                 .addComponent(jButtonDodajRezervaciju, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonObrisi, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAzuriraj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButtonAzuriraj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(3, 3, 3)))
                 .addContainerGap())
         );
 

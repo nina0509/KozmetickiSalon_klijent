@@ -144,11 +144,11 @@ public class DodajUsluguForma extends javax.swing.JFrame {
         );
 
         jButtonDodaj.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonDodaj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/add.png"))); // NOI18N
+        jButtonDodaj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButtonDodaj.setText("Dodaj ");
 
         jButtonObrisi.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonObrisi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/delete.png"))); // NOI18N
+        jButtonObrisi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete.png"))); // NOI18N
         jButtonObrisi.setText("Obrisi ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

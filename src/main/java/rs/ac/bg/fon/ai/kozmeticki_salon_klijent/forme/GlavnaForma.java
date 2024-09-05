@@ -65,12 +65,11 @@ public class GlavnaForma extends javax.swing.JFrame {
         jLabelUlogovani.setText(" ");
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ninic\\Desktop\\Seminarski ProjSof\\salon.png")); // NOI18N
-        jLabel2.setMinimumSize(new java.awt.Dimension(200, 200));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/salon2.png"))); // NOI18N
         jLabel2.setPreferredSize(new java.awt.Dimension(100, 100));
 
         jButtonOdjava.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonOdjava.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/logout.png"))); // NOI18N
+        jButtonOdjava.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
         jButtonOdjava.setText("Odjavi se");
         jButtonOdjava.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,8 +155,8 @@ public class GlavnaForma extends javax.swing.JFrame {
                         .addComponent(jButtonOdjava)))
                 .addGap(15, 15, 15))
             .addGroup(layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(118, 118, 118)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(

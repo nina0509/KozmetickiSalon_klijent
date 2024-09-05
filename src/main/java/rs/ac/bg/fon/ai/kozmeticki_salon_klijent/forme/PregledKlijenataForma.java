@@ -63,12 +63,12 @@ public class PregledKlijenataForma extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTableKlijenti);
 
         jButtonDodajKlijenta.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonDodajKlijenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/add.png"))); // NOI18N
+        jButtonDodajKlijenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButtonDodajKlijenta.setText("Dodaj novog klijenta");
         jButtonDodajKlijenta.setMargin(new java.awt.Insets(2, 5, 3, 14));
 
         jButtonPrikaziKlijenta.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonPrikaziKlijenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/info.png"))); // NOI18N
+        jButtonPrikaziKlijenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/info.png"))); // NOI18N
         jButtonPrikaziKlijenta.setText("  Detalji o klijentu");
         jButtonPrikaziKlijenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +86,7 @@ public class PregledKlijenataForma extends javax.swing.JFrame {
         jTextFieldPrezime.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
         jButtonPretrazi.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonPretrazi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/search.png"))); // NOI18N
+        jButtonPretrazi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/search.png"))); // NOI18N
         jButtonPretrazi.setText("Pretrazi");
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N

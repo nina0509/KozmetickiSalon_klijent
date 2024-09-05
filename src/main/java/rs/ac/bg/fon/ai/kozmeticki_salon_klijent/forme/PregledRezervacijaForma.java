@@ -81,7 +81,7 @@ public class PregledRezervacijaForma extends javax.swing.JFrame {
         jLabel2.setText("Datum:");
 
         jButtonPretrazi.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonPretrazi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/search.png"))); // NOI18N
+        jButtonPretrazi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/search.png"))); // NOI18N
         jButtonPretrazi.setText("Pretrazi");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -114,11 +114,11 @@ public class PregledRezervacijaForma extends javax.swing.JFrame {
         );
 
         jButtonDodaj.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonDodaj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/add.png"))); // NOI18N
+        jButtonDodaj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButtonDodaj.setText("Dodaj novu rezervaciju");
 
         jButtonPrikazi.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonPrikazi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/info.png"))); // NOI18N
+        jButtonPrikazi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/info.png"))); // NOI18N
         jButtonPrikazi.setText("Prikazi rezervaciju");
 
         jTableStavkeRez.setModel(new javax.swing.table.DefaultTableModel(

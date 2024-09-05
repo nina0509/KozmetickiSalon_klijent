@@ -66,7 +66,7 @@ public class PregledUslugaForma extends javax.swing.JFrame {
         jComboBoxTipovi.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
         jButtonPretrazi.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonPretrazi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/search.png"))); // NOI18N
+        jButtonPretrazi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/search.png"))); // NOI18N
         jButtonPretrazi.setText("Pretrazi");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -114,11 +114,11 @@ public class PregledUslugaForma extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTableUsluge);
 
         jButtonDodajUslugu.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonDodajUslugu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/add.png"))); // NOI18N
+        jButtonDodajUslugu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButtonDodajUslugu.setText("Dodaj novu uslugu");
 
         jButtonPrikazUsluge.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jButtonPrikazUsluge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/forme/resources/info.png"))); // NOI18N
+        jButtonPrikazUsluge.setIcon(new javax.swing.ImageIcon(getClass().getResource("/info.png"))); // NOI18N
         jButtonPrikazUsluge.setText("   Detalji o usluzi");
         jButtonPrikazUsluge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -123,9 +123,12 @@
               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
               <Component id="jButtonDodajRezervaciju" min="-2" pref="38" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButtonObrisi" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                  <Component id="jButtonAzuriraj" alignment="3" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jButtonObrisi" min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jButtonAzuriraj" max="32767" attributes="0"/>
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -160,7 +163,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="23" max="32767" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -323,7 +326,7 @@
                   <Font name="Century Gothic" size="12" style="1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/forme/resources/add.png"/>
+                  <Image iconType="3" name="/add.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Dodaj stavku"/>
               </Properties>
@@ -395,7 +398,7 @@
               <Font name="Century Gothic" size="12" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/forme/resources/delete.png"/>
+              <Image iconType="3" name="/delete.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Obrisi oznacenu stavku"/>
           </Properties>
@@ -458,7 +461,7 @@
           <Font name="Century Gothic" size="12" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/forme/resources/add.png"/>
+          <Image iconType="3" name="/add.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Sacuvaj rezervaciju"/>
       </Properties>
@@ -553,7 +556,7 @@
           <Font name="Century Gothic" size="12" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/forme/resources/update.png"/>
+          <Image iconType="3" name="/update.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Azuriraj rezervaciju"/>
       </Properties>
@@ -564,7 +567,7 @@
           <Font name="Century Gothic" size="12" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/forme/resources/delete.png"/>
+          <Image iconType="3" name="/delete.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Obrisi rezervaciju"/>
       </Properties>
