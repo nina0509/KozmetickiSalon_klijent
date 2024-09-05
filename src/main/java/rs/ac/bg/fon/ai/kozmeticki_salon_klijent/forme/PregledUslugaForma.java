@@ -13,13 +13,18 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
+ * Klasa koja predstavlja JFrame koji pruža korisnički interfejs za pregled
+ * usluga.
  *
- * @author ninic
+ * @author Nikolina Baros
  */
 public class PregledUslugaForma extends javax.swing.JFrame {
 
     /**
-     * Creates new form PregledUslugaForma
+     * Kreira novu formu PregledUslugaForma. Konstruktor inicijalizuje
+     * komponente korisničkog interfejsa i podešava ponašanje prozora prilikom
+     * zatvaranja.
+     *
      */
     public PregledUslugaForma() {
         initComponents();
@@ -170,60 +175,121 @@ public class PregledUslugaForma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Metoda koja se poziva kada korisnik klikne na dugme za prikaz detalja o
+     * usluzi.
+     *
+     * @param evt događaj klika na dugme
+     */
     private void jButtonPrikazUslugeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrikazUslugeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonPrikazUslugeActionPerformed
 
     /**
-     * @param args the command line arguments
+     * Vraća tabelu sa listom svih usluga.
+     *
+     * @return JTable sa listom usluga.
      */
     public JTable getjTableUsluge() {
         return jTableUsluge;
     }
 
     /**
-     * @param args the command line arguments
+     * Postavlja tabelu sa listom svih usluga.
+     *
+     *
+     * @param jTableUsluge Nova JTable za prikaz liste usluga.
      */
     public void setjTableUsluge(JTable jTableUsluge) {
         this.jTableUsluge = jTableUsluge;
     }
 
+    /**
+     * Vraća dugme za pretrazivanje usluga.
+     *
+     * @return JButton dugme za pretrazivanje usluga.
+     */
     public JButton getjButtonPretrazi() {
         return jButtonPretrazi;
     }
 
+    /**
+     * Postavlja dugme za pretrazivanje usluga.
+     *
+     * @param jButtonPretrazi Novo dugme za pretrazivanje usluga.
+     */
     public void setjButtonPretrazi(JButton jButtonPretrazi) {
         this.jButtonPretrazi = jButtonPretrazi;
     }
 
+    /**
+     * Vraća JComboBox za izbor tipa usluge.
+     *
+     * @return JComboBox za izbor tipa usluge.
+     */
     public JComboBox<TipUsluge> getjComboBoxTipovi() {
         return jComboBoxTipovi;
     }
 
+    /**
+     * Postavlja JComboBox za izbor tipa usluge.
+     *
+     * @param jComboBoxTipovi Novi JComboBox za izbor tipa usluge.
+     */
     public void setjComboBoxTipovi(JComboBox<TipUsluge> jComboBoxTipovi) {
         this.jComboBoxTipovi = jComboBoxTipovi;
     }
 
+    /**
+     * Vraća tekstualno polje za unos naziva usluge.
+     *
+     * @return JTextField za unos naziva usluge.
+     */
     public JTextField getjTextFieldNaziv() {
         return jTextFieldNaziv;
     }
 
+    /**
+     * Postavlja tekstualno polje za unos naziva usluge.
+     *
+     * @param jTextFieldNaziv Novo tekstualno polje za unos naziva usluge.
+     */
     public void setjTextFieldNaziv(JTextField jTextFieldNaziv) {
         this.jTextFieldNaziv = jTextFieldNaziv;
     }
 
+    /**
+     * Vraća dugme za dodavanje nove usluge.
+     *
+     * @return JButton dugme za dodavanje nove usluge.
+     */
     public JButton getjButtonDodajUslugu() {
         return jButtonDodajUslugu;
     }
 
+    /**
+     * Postavlja dugme za dodavanje nove usluge.
+     *
+     * @param jButtonDodajUslugu Novo dugme za dodavanje nove usluge.
+     */
     public void setjButtonDodajUslugu(JButton jButtonDodajUslugu) {
         this.jButtonDodajUslugu = jButtonDodajUslugu;
     }
 
+    /**
+     * Vraća dugme za prikaz usluge.
+     *
+     * @return JButton dugme za prikaz usluge.
+     */
     public JButton getjButtonPrikazUsluge() {
         return jButtonPrikazUsluge;
     }
 
+    /**
+     * Postavlja dugme za prikaz usluge.
+     *
+     * @param jButtonPrikazUsluge Novo dugme za prikaz usluge.
+     */
     public void setjButtonPrikazUsluge(JButton jButtonPrikazUsluge) {
         this.jButtonPrikazUsluge = jButtonPrikazUsluge;
     }
@@ -244,14 +310,29 @@ public class PregledUslugaForma extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNaziv;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Dodaje ActionListener na dugme za pretragu usluga.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonPretraziActionListener(ActionListener actionListener) {
         jButtonPretrazi.addActionListener(actionListener);
     }
 
+    /**
+     * Dodaje ActionListener na dugme za prikaz usluge.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonPrikazUslugeActionListener(ActionListener actionListener) {
         jButtonPrikazUsluge.addActionListener(actionListener);
     }
 
+    /**
+     * Dodaje ActionListener na dugme za dodavanje nove usluge.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonDodajUsluguActionListener(ActionListener actionListener) {
         jButtonDodajUslugu.addActionListener(actionListener);
     }

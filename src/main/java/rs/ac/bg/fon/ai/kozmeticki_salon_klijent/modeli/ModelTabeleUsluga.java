@@ -5,7 +5,7 @@
 package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli;
 
 
-import java.util.List;;
+import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
 import javax.swing.table.AbstractTableModel;

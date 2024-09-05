@@ -81,16 +81,6 @@ public class ModelTabeleRezervacije extends AbstractTableModel {
         this.lista = lista;
     }
 
-    //lokalna pretraga stara
-    public void pretrazi(String ime, String datum) {
-
-        List<Rezervacija> nova = lista.stream()
-                .filter(k -> (ime == null || ime.isBlank() || k.getKlijent().getIme().toLowerCase().contains(ime.toLowerCase()) | k.getKlijent().getPrezime().toLowerCase().contains(ime.toLowerCase())))
-                .filter(k -> (datum == null || datum.isBlank() || (new SimpleDateFormat("dd.MM.yyyy")).format(k.getDatum()).contains(datum.toLowerCase())))
-                .collect(Collectors.toList());
-        lista = nova;
-        fireTableDataChanged();
-
-    }
+   
 
 }

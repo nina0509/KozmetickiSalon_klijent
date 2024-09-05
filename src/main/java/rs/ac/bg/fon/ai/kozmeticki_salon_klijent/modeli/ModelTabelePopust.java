@@ -40,6 +40,12 @@ public class ModelTabelePopust extends AbstractTableModel {
         }
         this.lista = nova;
     }
+    
+    public ModelTabelePopust() {
+
+       this.lista=new ArrayList<>();
+    }
+
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {

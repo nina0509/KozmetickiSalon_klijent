@@ -41,7 +41,7 @@ public class PregledRezervacijaKontroler {
     public void otvoriFormu() {
 
         ucitajPodatkeZaFormu();
-        ModelTabeleStavkeRezervacije mtsr = new ModelTabeleStavkeRezervacije(new ArrayList<>());
+        ModelTabeleStavkeRezervacije mtsr = new ModelTabeleStavkeRezervacije();
         prf.getjTableStavkeRez().setModel(mtsr);
         prf.setVisible(true);
 

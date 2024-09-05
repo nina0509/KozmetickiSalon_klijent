@@ -43,10 +43,10 @@ public class DodajRezervacijuKontroler {
 
     public void otvoriFormu(TipForme t) {
 
-        ModelTabeleStavkeRezervacije mtsr = new ModelTabeleStavkeRezervacije(new ArrayList<>());
+        ModelTabeleStavkeRezervacije mtsr = new ModelTabeleStavkeRezervacije();
         drf.getjTableStavkeRez().setModel(mtsr);
 
-        ModelTabelePopust mtp = new ModelTabelePopust(new ArrayList<>());
+        ModelTabelePopust mtp = new ModelTabelePopust();
         drf.getjTablePopusti().setModel(mtp);
         ucitajPodatkeZaComboBoxeve();
         podesiFormu(t);

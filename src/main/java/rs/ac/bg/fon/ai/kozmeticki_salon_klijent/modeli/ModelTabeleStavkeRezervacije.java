@@ -4,6 +4,7 @@
  */
 package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.StavkaRezervacije;
@@ -31,6 +32,12 @@ public class ModelTabeleStavkeRezervacije extends AbstractTableModel {
 
         this.lista = lista;
     }
+    
+    public ModelTabeleStavkeRezervacije() {
+
+        this.lista = new ArrayList<>();
+    }
+ 
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
