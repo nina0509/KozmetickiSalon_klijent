@@ -13,7 +13,16 @@ package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.forme;
  * @author Nikolina Baros
  */
 public enum TipForme {
+    /**
+     * Tip forme koji predstavlja formu za dodavanje novog objekta.
+     */
     DODAJ, 
+    /**
+     * Tip forme koji predstavlja formu za izmenu objekta.
+     */
     IZMENI, 
+     /**
+     * Tip forme koji predstavlja formu za brisanje objekta.
+     */
     IZBRISI
 }

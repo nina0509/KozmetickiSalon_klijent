@@ -15,21 +15,36 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli.ModelTabeleUsluga;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.TipUsluge;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
 
-
 /**
+ * Klasa koja predstavlja kontroler za upravljanje formom za pregled usluga.
  *
- * @author ninic
+ * @author Nikolina Baros
  */
 public class PregledUslugaKontroler {
 
+    /**
+     * Forma za pregled usluga.
+     */
     private final PregledUslugaForma puf;
 
+    /**
+     * Konstruktor kontrolera koji postavlja formu na prosledjenu vrednost.
+     * Takodje, poziva metodu koja dodaje sve potrebne actionListenere na
+     * komponente forme.
+     *
+     * @param puf Forma za pregled usluga.
+     */
     public PregledUslugaKontroler(PregledUslugaForma puf) {
         this.puf = puf;
         addActionListener();
 
     }
 
+    /**
+     * Otvara formu i poziva metode koje ucitavaju podatke za tabelu usluga i
+     * ComboBox sa tipovima usluga.
+     *
+     */
     public void otvoriFormu() {
         ucitajPodatkeZaFormu();
         ucitajPodatkeZaComboBox();
@@ -37,6 +52,11 @@ public class PregledUslugaKontroler {
 
     }
 
+    /**
+     * Ucitava listu svih usluga i postavlja ih u tabelu za prikaz usluga na
+     * formi.
+     *
+     */
     private void ucitajPodatkeZaFormu() {
 
         List<Usluga> usluge = Komunikacija.getInstance().nadjiUsluge(null);
@@ -45,14 +65,22 @@ public class PregledUslugaKontroler {
 
     }
 
+    /**
+     * Osvezava tabelu svih usluga tako sto ponovo ucitava listu svih usluga.
+     *
+     */
     public void osveziTabeluUsluga() {
 
         ucitajPodatkeZaFormu();
     }
 
+    /**
+     * Postavlja actionListener-e za dugmad za pretragu usluga, dodavanje usluge
+     * i prikaz detalja o usluzi.
+     *
+     */
     private void addActionListener() {
 
-        
         //pretraga usluga
         puf.addButtonPretraziActionListener(new ActionListener() {
             @Override
@@ -61,15 +89,14 @@ public class PregledUslugaKontroler {
                 String naziv = puf.getjTextFieldNaziv().getText().trim();
                 TipUsluge tip = (TipUsluge) puf.getjComboBoxTipovi().getSelectedItem();
 
-                Usluga u=new Usluga();
+                Usluga u = new Usluga();
                 u.setNaziv(naziv);
                 u.setTip(tip);
-                List<Usluga> pretraga=Komunikacija.getInstance().nadjiUsluge(u);
+                List<Usluga> pretraga = Komunikacija.getInstance().nadjiUsluge(u);
                 ModelTabeleUsluga mtu = (ModelTabeleUsluga) puf.getjTableUsluge().getModel();
                 mtu.setLista(pretraga);
                 mtu.fireTableDataChanged();
-                
-               
+
                 if (mtu.getLista().isEmpty()) {
                     JOptionPane.showMessageDialog(puf, "Sistem ne moze da nadje usluge po zadatoj vrednosti", "Greska", JOptionPane.ERROR_MESSAGE);
                     ucitajPodatkeZaFormu();
@@ -90,7 +117,6 @@ public class PregledUslugaKontroler {
 
         });
 
-        
         //prikaz usluge ucitajUslugu
         puf.addButtonPrikazUslugeActionListener(new ActionListener() {
             @Override
@@ -105,15 +131,14 @@ public class PregledUslugaKontroler {
                     try {
                         ModelTabeleUsluga mtu = (ModelTabeleUsluga) puf.getjTableUsluge().getModel();
                         Usluga u = mtu.getLista().get(red);
-                        
-                        Usluga u1=Komunikacija.getInstance().ucitajUslugu(u);
-                          System.out.println(u1);
+
+                        Usluga u1 = Komunikacija.getInstance().ucitajUslugu(u);
+                        System.out.println(u1);
                         GlavniKontroler.getInstance().setParam("Usluga", u1);
-                      
-                        
+
                         GlavniKontroler.getInstance().otvoriIzbrisiUsluguFormu();
                     } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(puf, "Sistem ne moze da ucita uslugu", "Greska", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(puf, "Sistem ne moze da ucita uslugu", "Greska", JOptionPane.ERROR_MESSAGE);
                     }
 
                 }
@@ -124,6 +149,10 @@ public class PregledUslugaKontroler {
 
     }
 
+    /**
+     * Ucitava listu svih tipova usluga i postavlja ih u ComboBox sa tipovima
+     * usluga.
+     */
     private void ucitajPodatkeZaComboBox() {
         List<TipUsluge> tipovi = Komunikacija.getInstance().vratiSveTipoveUsluga();
         puf.getjComboBoxTipovi().addItem(null);

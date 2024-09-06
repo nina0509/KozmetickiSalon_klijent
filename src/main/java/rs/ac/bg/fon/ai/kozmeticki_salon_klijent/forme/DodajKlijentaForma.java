@@ -193,9 +193,7 @@ public class DodajKlijentaForma extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldBrTelActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAzuriraj;

@@ -291,9 +291,9 @@ public class DodajUsluguForma extends javax.swing.JFrame {
     }
 
      /**
-     * Postavlja oznaku polja sa id-jem usluge.
+     * Postavlja tekstualno polje sa Id-jem usluge.
      *
-     * @param jLabelId Nova JLabel oznaka polja sa id-jem usluge.
+     * @param jTextFieldId Novo tekstualno polje sa Id-jem usluge.
      */
     public void setjTextFieldId(JTextField jTextFieldId) {
         this.jTextFieldId = jTextFieldId;

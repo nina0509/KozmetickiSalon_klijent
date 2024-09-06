@@ -13,7 +13,6 @@ import java.awt.event.ActionListener;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.swing.DefaultListCellRenderer;
@@ -27,13 +26,23 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli.*;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.*;
 
 /**
- *
- * @author ninic
+ * Klasa koja predstavlja kontroler za upravljanje formom za dodavanje, izmenu i brisanje rezervacije.
+ * 
+ * @author Nikolina Baros
  */
 public class DodajRezervacijuKontroler {
 
+     /**
+     * Forma za dodavanje, izmenu i brisanje rezervacija kojom kontroler upravlja.
+     */
     private final DodajRezervacijuForma drf;
 
+    /**
+     * Konstruktor koji inicijalizuje kontroler i postavlja vrednost forme za dodavanje, izmenu i brisanje rezervacije.
+     * Takodje, poziva metodu koja dodaje sve potrebne actionListenere na komponente forme.
+     * 
+     * @param drf Forma za dodavanje, izmenu ili brisanje rezervacije.
+     */
     public DodajRezervacijuKontroler(DodajRezervacijuForma drf) {
         this.drf = drf;
 
@@ -41,6 +50,11 @@ public class DodajRezervacijuKontroler {
 
     }
 
+     /**
+     * Otvara formu za dodavanje nove ili izmenu postojece rezervacije na osnovu tipa forme.
+     * 
+     * @param t Tip forme koji određuje da li je u pitanju dodavanje ili izmena rezervacije.
+     */
     public void otvoriFormu(TipForme t) {
 
         ModelTabeleStavkeRezervacije mtsr = new ModelTabeleStavkeRezervacije();
@@ -59,6 +73,10 @@ public class DodajRezervacijuKontroler {
 
     }
 
+     /**
+     * Postavlja actionListener-e za sve relevantne komponente forme.
+     * Uključuje akcije za promene u combo box-evima, dodavanje, brisanje i ažuriranje stavki rezervacije, kao i dodavanje, brisanje i azuriranje rezervacije.
+     */
     private void addActionListener() {
 
         //vreme kraja kad se promeni usluga ili vreme pocetka
@@ -380,7 +398,11 @@ public class DodajRezervacijuKontroler {
 
     }
 
-    //slobodni termini
+    
+    /**
+     * Proverava dostupne termine za rezervaciju na osnovu već postojećih rezervacija.
+     */
+    
     private void proveriTermine() {
 
         try {
@@ -428,7 +450,9 @@ public class DodajRezervacijuKontroler {
 
     }
 
-    //lokalna provera vremena da li u stavkama koje jos nisu u bazi ima zauzeto
+   /**
+     * Proverava lokalne rezervacije koje jos nisu upisane u bazu i ažurira dostupne termine.
+     */
     private void proveriVremeLokalno() {
         List<StavkaRezervacije> stLokal = ((ModelTabeleStavkeRezervacije) drf.getjTableStavkeRez().getModel()).getLista();
         Usluga u = (Usluga) drf.getjComboBoxUsluga().getSelectedItem();
@@ -459,7 +483,11 @@ public class DodajRezervacijuKontroler {
         }
     
 
-    //priprema forme u zavisnosti od tipa
+    /**
+     * Podesava formu na osnovu tipa akcije (dodavanje, izmena).
+     * 
+     * @param t Tip forme koji određuje da li je u pitanju dodavanje ili izmena.
+     */
     private void podesiFormu(TipForme t) {
 
         if (t == TipForme.DODAJ) {
@@ -524,6 +552,9 @@ public class DodajRezervacijuKontroler {
 
     }
 
+    /**
+     * Učitava potrebne podatke za combo box-ove u formi (listu klijenata, usluga, tipova usluga i termina).
+     */
     private void ucitajPodatkeZaComboBoxeve() {
 
         List<Klijent> klijenti =Komunikacija.getInstance().vratiSveKlijente();
@@ -548,6 +579,9 @@ public class DodajRezervacijuKontroler {
 
     }
 
+    /**
+     * Učitava potrebne podatke za combo box sa terminima vremena pocetka usluge stavke rezervacije.
+     */
     private void popuniComboBoxVreme() {
         for (int i = 8; i <= 20; i++) {
             for (int j = 0; j <= 45; j = j + 15) {

@@ -14,21 +14,33 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.kontroler.glavni.GlavniKontroler
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Menadzer;
 
 /**
- *
- * @author ninic
+ * Klasa koja predstavlja kontroler za upravljanje glavnom formom korisničkog interfejsa aplikacije.
+ * 
+ * @author Nikolina Baros
  */
 public class GlavnaFormaKontroler {
 
+    /**
+     * Glavna forma kojom kontroler upravlja.
+     */
     private final GlavnaForma gf;
-
+/**
+     * Konstruktor kontrolera koji postavlja formu na prosledjenu vrednost.
+     * Takodje, poziva metodu koja dodaje sve potrebne actionListener-e na komponente forme.
+     * @param gf Glavna forma.
+     */
     public GlavnaFormaKontroler(GlavnaForma gf) {
         this.gf = gf;
         addActionListeners();
     }
 
+    /**
+     * Postavlja actionListener na dugme za odjavu klijenta.
+    * 
+    */
     private void addActionListeners() {
 
-        //Obrisi klijenta
+      
         gf.logoutAddActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -47,6 +59,10 @@ public class GlavnaFormaKontroler {
 
     }
 
+     /**
+     * Otvara glavnu formu i podesava ulogovanog menadzera.
+     * 
+     **/
     public void otvoriFormu() {
 
         Menadzer m = GlavniKontroler.getInstance().getUlogovani();

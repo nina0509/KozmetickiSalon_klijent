@@ -20,19 +20,33 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.TipUsluge;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
 
 /**
- *
- * @author ninic
+ * Klasa koja predstavlja kontroler za upravljanje formom za dodavanje i brisanje usluge.
+ * 
+ * @author Nikolina Baros
  */
 public class DodajUsluguKontroler {
 
+     /**
+     * Forma za dodavanje i brisanje usluge kojom kontroler upravlja.
+     */
     private final DodajUsluguForma duf;
 
+     /**
+     * Konstruktor kontrolera koji postavlja formu na prosledjenu vrednost.
+     * Takodje, poziva metodu koja dodaje sve potrebne actionListenere na komponente forme.
+     * @param duf Forma za dodavanje i brisanje usluga
+     */
     public DodajUsluguKontroler(DodajUsluguForma duf) {
         this.duf = duf;
         addActionListener();
 
     }
 
+     /**
+     * Otvara formu za dodavanje nove ili brisanje postojece usluge.
+     * 
+     * @param t Tip forme koji određuje da li je u pitanju dodavanje ili brisanje usluge.
+     */
     public void otvoriFormu(TipForme t) {
 
         duf.setVisible(true);
@@ -43,6 +57,9 @@ public class DodajUsluguKontroler {
 
     }
 
+    /**
+     * Učitava potrebne podatke za combo box sa tipovima usluge.
+     */
     private void ucitajPodatkeZaComboBox() {
 
         List<TipUsluge> tipovi = Komunikacija.getInstance().vratiSveTipoveUsluga();
@@ -52,6 +69,10 @@ public class DodajUsluguKontroler {
 
     }
 
+     /**
+     * Postavlja actionListener-e za dugmad za dodavanje i brisanje usluge na formi.
+    * 
+    */
     private void addActionListener() {
         duf.dodajAddActionListener(new ActionListener() {
             @Override
@@ -120,7 +141,11 @@ public class DodajUsluguKontroler {
         });
 
     }
-
+ /**
+     * Podesava formu na osnovu tipa akcije (dodavanje, brisanje).
+     * 
+     * @param t Tip forme koji određuje da li je u pitanju dodavanje ili brisanje usluge.
+     */
     private void podesiFormu(TipForme t) {
 
         if (t == TipForme.DODAJ) {

@@ -250,10 +250,20 @@ public class PregledRezervacijaForma extends javax.swing.JFrame {
         jTableRezervacije.getSelectionModel().addListSelectionListener(actionListener);
     }
 
+    /**
+     * Vraca tekstualno polje za unos datuma rezervacije.
+     *
+     * @return JTextField za unos datuma rezervacije.
+     */
     public JTextField getjTextFieldDatum() {
         return jTextFieldDatum;
     }
 
+     /**
+     * Postavlja tekstualno polje za unos datuma rezervacije.
+     *
+     * @param jTextFieldDatum Novi JTextField za unos datuma rezervacije.
+     */
     public void setjTextFieldDatum(JTextField jTextFieldDatum) {
         this.jTextFieldDatum = jTextFieldDatum;
     }
