@@ -17,19 +17,33 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.kontroler.glavni.GlavniKontroler
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Klijent;
 
 /**
- *
- * @author ninic
+ * Klasa koja predstavlja kontroler za upravljanje formom za dodavanje, izmenu i brisanje klijenata.
+ * 
+ * @author Nikolina Baros
  */
 public class DodajKlijentaKontroler {
 
+    /**
+     * Forma za dodavanje, izmenu i brisanje klijenata kojom kontroler upravlja.
+     */
     private final DodajKlijentaForma dkf;
 
+      /**
+     * Konstruktor kontrolera koji postavlja formu na prosledjenu vrednost.
+     * Takodje, poziva metodu koja dodaje sve potrebne actionListenere na komponente forme.
+     * @param dkf Forma za dodavanje, izmenu i brisanje klijenata
+     */
     public DodajKlijentaKontroler(DodajKlijentaForma dkf) {
         this.dkf = dkf;
         addActionListener();
 
     }
 
+    /**
+     * Otvara formu za dodavanje ili izmenu klijenta na osnovu prosledjenog tipa forme.
+     * 
+     * @param t Tip forme (dodavanje ili izmena).
+     */
     public void otvoriFormu(TipForme t) {
 
         podesiFormu(t);
@@ -39,6 +53,9 @@ public class DodajKlijentaKontroler {
 
     }
 
+     /**
+     * Dodaje ActionListener-e na dugmice za brisanje,dodavanje i azuriranje klijenta u formi.
+     */
     private void addActionListener() {
         
         //cuvanje Klijenta
@@ -157,6 +174,11 @@ public class DodajKlijentaKontroler {
 
     }
 
+    /**
+     * Podesava formu za dodavanje ili izmenu klijenta na osnovu prosledjenog tipa forme.
+     * 
+     * @param t Tip forme (dodavanje ili izmena).
+     */
     private void podesiFormu(TipForme t) {
 
         if (t == TipForme.DODAJ) {

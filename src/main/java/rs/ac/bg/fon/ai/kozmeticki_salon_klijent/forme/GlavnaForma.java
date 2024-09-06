@@ -7,15 +7,25 @@ package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.forme;
 import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.kontroler.glavni.GlavniKontroler;
-
 /**
- *
- * @author ninic
+ * 
+ * Klasa koja predstavlja glavnu formu korisničkog interfejsa aplikacije 
+ * za upravljenje radom kozmetičkog salona. Koristi se za prikaz osnovnih informacija i
+ * omogućavanje korisnicima pristup različitim funkcionalnostima
+ * aplikacije kao što su pregled usluga, klijenata, rezervacija i statistike.
+ * 
+ * Klasa nasleđuje JFrame i sadrži metode za inicijalizaciju i upravljanje komponentama.
+ * 
+ * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class GlavnaForma extends javax.swing.JFrame {
 
-    /**
-     * Creates new form GlavnaForma
+   
+     /**
+     * Kreira novu formu GlavnaForma. Konstruktor inicijalizuje
+     * komponente korisničkog interfejsa.
+     *
      */
     public GlavnaForma() {
         initComponents();
@@ -178,29 +188,54 @@ public class GlavnaForma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+     /**
+     * Metoda koja se poziva kada korisnik izabere stavku "Pregled klijenata" iz menija.
+     * Otvara formu za pregled klijenata.
+     * 
+     * @param evt Događaj koji izaziva poziv metode.
+     */
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         GlavniKontroler.getInstance().otvoriPregledKlijenataFormu();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+     /**
+     * Metoda koja se poziva kada korisnik izabere stavku "Pregled usluga" iz menija.
+     * Otvara formu za pregled usluga.
+     * 
+     * @param evt Događaj koji izaziva poziv metode.
+     */
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         GlavniKontroler.getInstance().otvoriPregledUslugaFormu();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+      /**
+     * Metoda koja se poziva kada korisnik izabere stavku "Pregled rezervacija" iz menija.
+     * Otvara formu za pregled rezervacija.
+     * 
+     * @param evt Događaj koji izaziva poziv metode.
+     */
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         GlavniKontroler.getInstance().otvoriPregledRezervacijaFormu();
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
+    /**
+     * Metoda koja se poziva kada korisnik pritisne dugme za odjavu.
+    
+     * @param evt Događaj koji izaziva poziv metode.
+     */
     private void jButtonOdjavaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOdjavaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonOdjavaActionPerformed
-
+/**
+     * Metoda koja se poziva kada korisnik izabere stavku "Statistika" iz menija.
+     * Otvara formu za pregled statistika.
+     * 
+     * @param evt Događaj koji izaziva poziv metode.
+     */
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
            GlavniKontroler.getInstance().otvoriStatistikaRezervacijaFormu();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonOdjava;
@@ -222,14 +257,29 @@ public class GlavnaForma extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Vraća JLabel za prikaz trenutno ulogovanog klijenta.
+     *
+     * @return JLabel za prikaz trenutno ulogovanog klijenta.
+     */
     public JLabel getjLabelUlogovani() {
         return jLabelUlogovani;
     }
 
+      /**
+     * Postavlja JLabel za prikaz trenutno ulogovanog klijenta.
+     *
+     * @param jLabelUlogovani Novi JLabel za prikaz trenutno ulogovanog klijenta.
+     */
     public void setjLabelUlogovani(JLabel jLabelUlogovani) {
         this.jLabelUlogovani = jLabelUlogovani;
     }
 
+    /**
+     * Dodaje ActionListener za dugme za odjavu klijenta.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void logoutAddActionListener(ActionListener actionListener) {
 
         jButtonOdjava.addActionListener(actionListener);

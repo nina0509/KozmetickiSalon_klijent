@@ -5,11 +5,24 @@
 package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.forme;
 
 /**
- *
- * @author ninic
+ * Enumeracija koja predstavlja razlicite tipove forme koje forme mogu imati u sistemu.
+ * 
+ * Svaka konstanta u ovoj enumeraciji predstavlja specifičan tip forme koji
+ * se koristi unutar sistema.
+ * 
+ * @author Nikolina Baros
  */
 public enum TipForme {
+    /**
+     * Tip forme koji predstavlja formu za dodavanje novog objekta.
+     */
     DODAJ, 
+    /**
+     * Tip forme koji predstavlja formu za izmenu objekta.
+     */
     IZMENI, 
+     /**
+     * Tip forme koji predstavlja formu za brisanje objekta.
+     */
     IZBRISI
 }

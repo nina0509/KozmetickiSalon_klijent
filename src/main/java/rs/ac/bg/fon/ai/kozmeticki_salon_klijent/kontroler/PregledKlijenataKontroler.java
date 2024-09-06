@@ -16,27 +16,43 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.kontroler.glavni.GlavniKontroler
 import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli.ModelTabeleKlijent;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Klijent;
 
-
 /**
- *
- * @author ninic
+ * Klasa koja predstavlja kontroler za upravljanje formom za pregled klijenata.
+ * 
+ * @author Nikolina Baros
  */
 public class PregledKlijenataKontroler {
 
+     /**
+     * Forma za pregled klijenata.
+     */
     private final PregledKlijenataForma pkf;
 
+     /**
+     * Konstruktor kontrolera koji postavlja formu na prosledjenu vrednost.
+     * Takodje, poziva metodu koja dodaje sve potrebne actionListenere na komponente forme.
+     * @param pkf Forma za pregled klijenata.
+     */
     public PregledKlijenataKontroler(PregledKlijenataForma pkf) {
         this.pkf = pkf;
         addActionListener();
 
     }
 
+    /**
+     * Poziva metodu koja ucitava sve klijente i otvara formu za pregled klijenata.
+     * 
+     */
     public void otvoriFormu() {
         ucitajPodatkeZaFormu();
         pkf.setVisible(true);
 
     }
 
+     /**
+     * Ucitava listu svih klijenata i upisuje je u tabelu za prikaz klijenata na formi.
+     * 
+     */
     private void ucitajPodatkeZaFormu() {
 
        
@@ -46,6 +62,10 @@ public class PregledKlijenataKontroler {
 
     }
 
+    /**
+     * Postavlja actionListener-e za dugmad za pretragu klijenata, dodavanje klijenta i prikaz detalja o klijentu.
+    * 
+    */
     private void addActionListener() {
 
         //Pretraga klijenata, nadjiKlijente
@@ -119,6 +139,10 @@ public class PregledKlijenataKontroler {
 
     }
 
+     /**
+     * Osvezava prikaz klijenata u tabeli pozivajuci metodu koja ucitava listu svih klijenata.
+    * 
+    */
     public void osveziTabeluKlijenata() {
 
         ucitajPodatkeZaFormu();

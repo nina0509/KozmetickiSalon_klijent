@@ -25,28 +25,45 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Klijent;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Rezervacija;
 
 /**
- *
- * @author ninic
+ * Klasa koja predstavlja kontroler za upravljanje formom za pregled rezervacija.
+ * 
+ * @author Nikolina Baros
  */
 public class PregledRezervacijaKontroler {
-
+     /**
+     * Forma za pregled rezervacija.
+     */
     private final PregledRezervacijaForma prf;
 
+     /**
+     * Konstruktor kontrolera koji postavlja formu na prosledjenu vrednost.
+     * Takodje, poziva metodu koja dodaje sve potrebne actionListenere na komponente forme.
+     * @param prf Forma za pregled rezervacija.
+     */
     public PregledRezervacijaKontroler(PregledRezervacijaForma prf) {
         this.prf = prf;
         addActionListener();
 
     }
 
+    
+    /**
+     * Ucitava listu svih rezervacija u tabelu na formi i otvara formu za prikaz rezervacija.
+     * 
+     */
     public void otvoriFormu() {
 
         ucitajPodatkeZaFormu();
-        ModelTabeleStavkeRezervacije mtsr = new ModelTabeleStavkeRezervacije(new ArrayList<>());
+        ModelTabeleStavkeRezervacije mtsr = new ModelTabeleStavkeRezervacije();
         prf.getjTableStavkeRez().setModel(mtsr);
         prf.setVisible(true);
 
     }
 
+    /**
+     * Ucitava listu svih rezervacija i upisuje je u tabelu za prikaz rezervacija na formi.
+     * 
+     */
     private void ucitajPodatkeZaFormu() {
 
         List<Rezervacija> rezervacije = Komunikacija.getInstance().nadjiRezervacije(null);
@@ -66,6 +83,10 @@ public class PregledRezervacijaKontroler {
 
     }
 
+    /**
+     * Postavlja actionListener-e za dugmad za pretragu rezervacija, dodavanje rezervacije i prikaz detalja o rezervaciji.
+    * 
+    */
     private void addActionListener() {
 
         //pretraga rezervacija
@@ -170,6 +191,10 @@ public class PregledRezervacijaKontroler {
 
     }
 
+    /**
+     * Osvezava prikaz rezervacija u tabeli pozivajuci metodu koja ucitava listu svih rezervacija.
+    * 
+    */
     public void osveziTabeluRezervacija() {
         ucitajPodatkeZaFormu();
     }

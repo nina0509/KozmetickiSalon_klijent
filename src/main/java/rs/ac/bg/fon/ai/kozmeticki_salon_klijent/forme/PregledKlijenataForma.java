@@ -11,13 +11,19 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
+ * Klasa koja predstavlja JFrame koji pruža korisnički interfejs za pregled
+ * klijenata.
  *
- * @author ninic
+ * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class PregledKlijenataForma extends javax.swing.JFrame {
 
     /**
-     * Creates new form PregledKlijenataForma
+     * Kreira novu formu PregledKlijenataForma. Konstruktor inicijalizuje
+     * komponente korisničkog interfejsa i podešava ponašanje prozora prilikom
+     * zatvaranja.
+     *
      */
     public PregledKlijenataForma() {
         initComponents();
@@ -167,20 +173,30 @@ public class PregledKlijenataForma extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+ /**
+     * Metoda koja se poziva kada korisnik klikne na dugme za prikaz detalja o
+     * klijentu.
+     *
+     * @param evt događaj klika na dugme
+     */
     private void jButtonPrikaziKlijentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPrikaziKlijentaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonPrikaziKlijentaActionPerformed
 
     /**
-     * @param args the command line arguments
+     * Vraća tabelu sa listom svih klijenata.
+     *
+     * @return JTable sa listom klijenata.
      */
     public JTable getjTableKlijenti() {
         return jTableKlijenti;
     }
 
     /**
-     * @param args the command line arguments
+     * Postavlja tabelu sa listom svih klijenata.
+     *
+     *
+     * @param jTableKlijenti Nova JTable za prikaz liste klijenata.
      */
     public void setjTableKlijenti(JTable jTableKlijenti) {
         this.jTableKlijenti = jTableKlijenti;
@@ -201,57 +217,123 @@ public class PregledKlijenataForma extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldPrezime;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Vraća dugme za pretragu klijenata.
+     *
+     * @return JButton za pretragu klijenata.
+     */
     public JButton getjButtonPretrazi() {
         return jButtonPretrazi;
     }
 
+    /**
+     * Postavlja dugme za pretragu klijenata.
+     *
+     * @param jButtonPretrazi Novo dugme za pretragu klijenata.
+     */
     public void setjButtonPretrazi(JButton jButtonPretrazi) {
         this.jButtonPretrazi = jButtonPretrazi;
     }
 
+    /**
+     * Vraća dugme za dodavanje klijenta.
+     *
+     * @return JButton za dodavanje klijenta.
+     */
     public JButton getjButtonDodajKlijenta() {
         return jButtonDodajKlijenta;
     }
 
+    /**
+     * Postavlja dugme za dodavanje klijenta.
+     *
+     * @param jButtonDodajKlijenta Novo dugme za dodavanje klijenta.
+     */
     public void setjButtonDodajKlijenta(JButton jButtonDodajKlijenta) {
         this.jButtonDodajKlijenta = jButtonDodajKlijenta;
     }
 
+    /**
+     * Vraća dugme za prikaz klijenta.
+     *
+     * @return JButton za prikaz klijenta.
+     */
     public JButton getjButtonPrikaziKlijenta() {
         return jButtonPrikaziKlijenta;
     }
 
+    /**
+     * Postavlja dugme za prikaz klijenta.
+     *
+     * @param jButtonPrikaziKlijenta Novo dugme za prikaz klijenta.
+     */
     public void setjButtonPrikaziKlijenta(JButton jButtonPrikaziKlijenta) {
         this.jButtonPrikaziKlijenta = jButtonPrikaziKlijenta;
     }
 
+    /**
+     * Dodaje ActionListener na dugme za pretragu klijenata.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonPretraziActionListener(ActionListener actionListener) {
 
         jButtonPretrazi.addActionListener(actionListener);
     }
 
+    /**
+     * Dodaje ActionListener na dugme za dodavanje klijenta.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonDodajKlijentaActionListener(ActionListener actionListener) {
 
         jButtonDodajKlijenta.addActionListener(actionListener);
     }
 
+    /**
+     * Dodaje ActionListener na dugme za prikaz klijenta.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonPrikaziKlijentaActionListener(ActionListener actionListener) {
 
         jButtonPrikaziKlijenta.addActionListener(actionListener);
     }
 
+    /**
+     * Vraća tekstualno polje za unos imena klijenta.
+     *
+     * @return JTextField za unos imena klijenta.
+     */
     public JTextField getjTextFieldIme() {
         return jTextFieldIme;
     }
 
+    /**
+     * Postavlja tekstualno polje za unos imena klijenta.
+     *
+     * @param jTextFieldIme Novo tekstualno polje za unos imena klijenta.
+     */
     public void setjTextFieldIme(JTextField jTextFieldIme) {
         this.jTextFieldIme = jTextFieldIme;
     }
 
+    /**
+     * Vraća tekstualno polje za unos prezimena klijenta.
+     *
+     * @return JTextField za unos prezimena klijenta.
+     */
     public JTextField getjTextFieldPrezime() {
         return jTextFieldPrezime;
     }
 
+    /**
+     * Postavlja tekstualno polje za unos prezimena klijenta.
+     *
+     * @param jTextFieldPrezime Novo tekstualno polje za unos prezimena
+     * klijenta.
+     */
     public void setjTextFieldPrezime(JTextField jTextFieldPrezime) {
         this.jTextFieldPrezime = jTextFieldPrezime;
     }

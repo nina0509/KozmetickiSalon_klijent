@@ -4,8 +4,6 @@
  */
 package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.forme;
 
-
-
 import java.awt.event.ActionListener;
 import java.time.LocalTime;
 import javax.swing.JButton;
@@ -19,13 +17,19 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.TipUsluge;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
 
 /**
+ * Klasa koja predstavlja JFrame koji pruža korisnički interfejs za dodavanje
+ * nove rezervacije, brisanje rezervacije ili azuriranje postojece rezervacije.
  *
- * @author ninic
+ * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class DodajRezervacijuForma extends javax.swing.JFrame {
 
     /**
-     * Creates new form DodajRezervacijuForma
+     * Kreira novu formu DodajRezervacijuForma. Konstruktor inicijalizuje
+     * komponente korisničkog interfejsa i podešava ponašanje prozora prilikom
+     * zatvaranja.
+     *
      */
     public DodajRezervacijuForma() {
         initComponents();
@@ -390,119 +394,261 @@ public class DodajRezervacijuForma extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldUkupnaCenaActionPerformed
 
     /**
-     * @param args the command line arguments
+     * Vraća dugme za dodavanje stavke.
+     *
+     * @return JButton za dodavanje stavke.
      */
     public JButton getjButtonDodajStavku() {
         return jButtonDodajStavku;
     }
 
+    /**
+     * Postavlja dugme za dodavanje stavke.
+     *
+     * @param jButtonDodajStavku Novo dugme za dodavanje stavke.
+     */
     public void setjButtonDodajStavku(JButton jButtonDodajStavku) {
         this.jButtonDodajStavku = jButtonDodajStavku;
     }
 
+    /**
+     * Vraća dugme za brisanje stavke.
+     *
+     * @return JButton za brisanje stavke.
+     */
     public JButton getjButtonObrisiStavku() {
         return jButtonObrisiStavku;
     }
 
+    /**
+     * Postavlja dugme za brisanje stavke.
+     *
+     * @param jButtonObrisiStavku Novo dugme za brisanje stavke.
+     */
     public void setjButtonObrisiStavku(JButton jButtonObrisiStavku) {
         this.jButtonObrisiStavku = jButtonObrisiStavku;
     }
 
+    /**
+     * Vraća JComboBox za izbor klijenta.
+     *
+     * @return JComboBox za izbor klijenta.
+     */
     public JComboBox<Klijent> getjComboBoxKlijent() {
         return jComboBoxKlijent;
     }
 
+    /**
+     * Postavlja JComboBox za izbor klijenta.
+     *
+     * @param jComboBoxKlijent Novi JComboBox za izbor klijenta.
+     */
     public void setjComboBoxKlijent(JComboBox<Klijent> jComboBoxKlijent) {
         this.jComboBoxKlijent = jComboBoxKlijent;
     }
 
+    /**
+     * Vraća JComboBox za izbor vremena početka stavke rezervacije.
+     *
+     * @return JComboBox za izbor vremena početka stavke rezervacije.
+     */
     public JComboBox<LocalTime> getjComboBoxVremePocetka() {
         return jComboBoxVremePocetka;
     }
 
+    /**
+     * Vraća JComboBox kroz koji se unosi da li je klijent dosao na rezervaciju
+     * ili ne.
+     *
+     * @return JComboBox kroz koji se unosi da li je klijent dosao na
+     * rezervaciju.
+     */
     public JComboBox<String> getjComboBoxDolazak() {
         return jComboBoxDolazak;
     }
 
+    /**
+     * Vraća JLabel koja prikazuje oznaku polja dolaska klijenta.
+     *
+     * @return JLabel za prikaz oznake polja dolaska klijenta.
+     */
     public JLabel getjLabelDolazak() {
         return jLabelDolazak;
     }
 
+    /**
+     * Postavlja JLabel koja prikazuje oznaku polja dolaska klijenta.
+     *
+     * @param jLabelDolazak Novi JLabel za prikaz oznake polja dolaska klijenta.
+     */
     public void setjLabelDolazak(JLabel jLabelDolazak) {
         this.jLabelDolazak = jLabelDolazak;
     }
 
+    /**
+     * Postavlja JComboBox kroz koji se unosi da li je klijent dosao na rezervaciju
+     * ili ne.
+     *
+     * @param jComboBoxDolazak Novi JComboBox kroz koji se unosi da li je klijent dosao na
+     * rezervaciju.
+     */
     public void setjComboBoxDolazak(JComboBox<String> jComboBoxDolazak) {
         this.jComboBoxDolazak = jComboBoxDolazak;
     }
 
+/**
+     * Postavlja JComboBox za izbor vremena pocetka stavke rezervacije.
+     *
+     * @param jComboBoxVremePocetka Novi JComboBox za izbor vremena pocetka stavke rezervacije.
+     */
     public void setjComboBoxVremePocetka(JComboBox<LocalTime> jComboBoxVremePocetka) {
         this.jComboBoxVremePocetka = jComboBoxVremePocetka;
     }
 
+    
+    /**
+     * Vraća JComboBox za izbor vremena zavrsetka stavke rezervacije.
+     *
+     * @return JComboBox za izbor vremena zavrsetka stavke rezervacije.
+     */
     public JComboBox<LocalTime> getjComboBoxVremeZavrsetka() {
         return jComboBoxVremeZavrsetka;
     }
 
+    /**
+     * Postavlja JComboBox za izbor vremena zavrsetka stavke rezervacije.
+     *
+     * @param jComboBoxVremeZavrsetka Novi JComboBox za izbor vremena zavrsetka stavke rezervacije.
+     */
     public void setjComboBoxVremeZavrsetka(JComboBox<LocalTime> jComboBoxVremeZavrsetka) {
         this.jComboBoxVremeZavrsetka = jComboBoxVremeZavrsetka;
     }
 
+    /**
+     * Vraća JComboBox za izbor usluge stavke rezervacije.
+     *
+     * @return JComboBox za izbor usluge stavke rezervacije.
+     */
     public JComboBox<Usluga> getjComboBoxUsluga() {
         return jComboBoxUsluga;
     }
 
+     /**
+     * Postavlja JComboBox za izbor usluge stavke rezervacije.
+     *
+     * @param jComboBoxUsluga Novi JComboBox izbor usluge stavke rezervacije.
+     */
     public void setjComboBoxUsluga(JComboBox<Usluga> jComboBoxUsluga) {
         this.jComboBoxUsluga = jComboBoxUsluga;
     }
 
+     /**
+     * Vraća tekstualno polje za unos cene usluge.
+     *
+     * @return JTextField za unos cene usluge.
+     */
     public JTextField getjTextFieldCenaUsluge() {
         return jTextFieldCenaUsluge;
     }
 
+    /**
+     * Postavlja tekstualno polje za unos cene usluge.
+     *
+     * @param jTextFieldCenaUsluge Novi jTextField za unos cene usluge.
+     */
     public void setjTextFieldCenaUsluge(JTextField jTextFieldCenaUsluge) {
         this.jTextFieldCenaUsluge = jTextFieldCenaUsluge;
     }
 
+    
+     /**
+     * Vraća tekstualno polje za unos datuma rezervacije.
+     *
+     * @return JTextField za za unos datuma rezervacije.
+     */
     public JTextField getjTextFieldDatum() {
         return jTextFieldDatum;
     }
 
+    /**
+     * Postavlja tekstualno polje za unos datuma rezervacije.
+     *
+     * @param jTextFieldDatum Novi jTextField za unos datuma rezervacije.
+     */
     public void setjTextFieldDatum(JTextField jTextFieldDatum) {
         this.jTextFieldDatum = jTextFieldDatum;
     }
 
+     /**
+     * Vraća labelu koja prikazuje oznaku za polje ID rezervacije.
+     *
+     * @return JLabel za prikaz oznake za polje ID-a rezervacije.
+     */
     public JLabel getjLabelId() {
         return jLabelId;
     }
 
+    /**
+     * Postavlja labelu koja prikazuje oznaku za ID rezervacije.
+     *
+     * @param jLabelId Nova labela koja prikazuje oznaku za ID rezervacije.
+     */
     public void setjLabelId(JLabel jLabelId) {
         this.jLabelId = jLabelId;
     }
 
+    /**
+     * Vraća tekstualno polje za unos ukupne cene rezervacije.
+     *
+     * @return JTextField za unos ukupne cene rezervacije.
+     */
     public JTextField getjTextFieldUkupnaCena() {
         return jTextFieldUkupnaCena;
     }
 
+   
+     /**
+     * Vraća tabelu koja sadrzi sve stavke rezervacije.
+     *
+     * @return JTable koja sadrzi sve stavke rezervacije .
+     */
     public JTable getjTableStavkeRez() {
         return jTableStavkeRez;
     }
 
+      /**
+     * Postavlja tabelu koja sadrzi sve stavke rezervacije.
+     *
+     * @param jTableStavkeRez Nova tabela koja sadrzi sve stavke rezervacije.
+     */
     public void setjTableStavkeRez(JTable jTableStavkeRez) {
         this.jTableStavkeRez = jTableStavkeRez;
     }
 
-    /**
-     * @param args the command line arguments
+     /**
+     * Postavlja tekstualno polje za unos ukupne cene rezervacije.
+     *
+     * @param jTextFieldUkupnaCena Novi jTextField za unos ukupne cene rezervacije.
      */
     public void setjTextFieldUkupnaCena(JTextField jTextFieldUkupnaCena) {
         this.jTextFieldUkupnaCena = jTextFieldUkupnaCena;
     }
 
+     /**
+     * Vraća JComboBox za izbor tipa usluge stavke rezervacije.
+     *
+     * @return JComboBox za izbor tipa usluge stavke rezervacije.
+     */
+    
     public JComboBox<TipUsluge> getjComboBoxTipUsluge() {
         return jComboBoxTipUsluge;
     }
 
+     /**
+     * Postavlja JComboBox za izbor tipa usluge stavke rezervacije.
+     *
+     * @param jComboBoxTipUsluge Novi JComboBox za izbor tipa usluge stavke rezervacije.
+     */
     public void setjComboBoxTipUsluge(JComboBox<TipUsluge> jComboBoxTipUsluge) {
         this.jComboBoxTipUsluge = jComboBoxTipUsluge;
     }
@@ -544,95 +690,196 @@ public class DodajRezervacijuForma extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldUkupnaCena;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Dodaje ActionListener za tekstualno polje za unos datuma.
+     *
+     * @param actionListener ActionListener koji će biti dodat tekstualnom polju za unos datuma.
+     */
     public void DatumAddActionListener(ActionListener actionListener) {
 
         jTextFieldDatum.addActionListener(actionListener);
     }
 
+    
+     /**
+     * Dodaje ActionListener na dugme za dodavanje stavke rezervacije.
+     *
+     * @param actionListener ActionListener koji će biti dodat na dugme.
+     */
     public void dodajStavkuAddActionListener(ActionListener actionListener) {
 
         jButtonDodajStavku.addActionListener(actionListener);
     }
 
+    /**
+     * Dodaje ActionListener na dugme za brisanje stavke rezervacije.
+     *
+     * @param actionListener ActionListener koji će biti dodat na dugme.
+     */
     public void obrisiStavkuAddActionListener(ActionListener actionListener) {
 
         jButtonObrisiStavku.addActionListener(actionListener);
     }
 
+    /**
+     * Dodaje ActionListener na dugme za dodavanje rezervacije.
+     *
+     * @param actionListener ActionListener koji će biti dodat na dugme.
+     */
     public void dodajRezAddActionListener(ActionListener actionListener) {
 
         jButtonDodajRezervaciju.addActionListener(actionListener);
     }
 
+      /**
+     * Dodaje ActionListener na ComboBox za izbor usluge i combo box za izbor vremena pocetka.
+     *
+     * @param actionListener ActionListener koji će biti dodat na ComboBox-eve.
+     */
     public void ComboBoxActionListener(ActionListener actionListener) {
 
         jComboBoxUsluga.addActionListener(actionListener);
         jComboBoxVremePocetka.addActionListener(actionListener);
     }
 
+     /**
+     * Dodaje ActionListener na ComboBox za izbor usluge.
+     *
+     * @param actionListener ActionListener koji će biti dodat na ComboBox.
+     */
     public void ComboBoxUslugaActionListener(ActionListener actionListener) {
 
         jComboBoxUsluga.addActionListener(actionListener);
     }
 
+     /**
+     * Dodaje ActionListener na ComboBox za izbor klijenta.
+     *
+     * @param actionListener ActionListener koji će biti dodat na ComboBox.
+     */
     public void ComboBoxKlijentActionListener(ActionListener actionListener) {
 
         jComboBoxKlijent.addActionListener(actionListener);
 
     }
-
+ /**
+     * Dodaje ActionListener na ComboBox za izbor tipa usluge.
+     *
+     * @param actionListener ActionListener koji će biti dodat na ComboBox.
+     */
     public void ComboBoxTipUslugeActionListener(ActionListener actionListener) {
 
         jComboBoxTipUsluge.addActionListener(actionListener);
 
     }
 
+    /**
+     * Dodaje ActionListener na dugme za brisanje rezervacije.
+     *
+     * @param actionListener ActionListener koji će biti dodat na dugme.
+     */
     public void ObrisiRezAddActionListener(ActionListener actionListener) {
 
         jButtonObrisi.addActionListener(actionListener);
     }
 
+     /**
+     * Dodaje ActionListener na dugme za azuriranje rezervacije.
+     *
+     * @param actionListener ActionListener koji će biti dodat na dugme.
+     */
     public void AzurirajRezAddActionListener(ActionListener actionListener) {
 
         jButtonAzuriraj.addActionListener(actionListener);
     }
 
+     /**
+     * Vraća dugme za dodavanje rezervacije.
+     *
+     * @return JButton za dodavanje rezervacije.
+     */
+    
     public JButton getjButtonDodajRezervaciju() {
         return jButtonDodajRezervaciju;
     }
 
+      /**
+     * Postavlja dugme za dodavanje rezervacije.
+     *
+     * @param jButtonDodajRezervaciju Novo dugme za dodavanje rezervacije.
+     */
     public void setjButtonDodajRezervaciju(JButton jButtonDodajRezervaciju) {
         this.jButtonDodajRezervaciju = jButtonDodajRezervaciju;
     }
 
+     /**
+     * Vraća tabelu koja sadrzi popuste izabranog klijenta.
+     *
+     * @return JTable sa popustima izabranog klijenta.
+     */
     public JTable getjTablePopusti() {
         return jTablePopusti;
     }
 
+     /**
+     * Postavlja tabelu koja sadrzi popuste izabranog klijenta.
+     * 
+     * @param jTablePopusti Nova JTable sa popustima izabranog klijenta.
+     */
     public void setjTablePopusti(JTable jTablePopusti) {
         this.jTablePopusti = jTablePopusti;
     }
 
+    /**
+     * Vraća tekstualno polje sa Id-jem rezervacije.
+     *
+     * @return JTextField sa Id-jem rezervacije.
+     */
     public JTextField getjTextFieldId() {
         return jTextFieldId;
     }
 
+      /**
+     * Postavlja tekstualno polje sa Id-jem rezervacije.
+     * 
+     * @param jTextFieldId Novo tekstualno polje sa Id-jem rezervacije.
+     */
     public void setjTextFieldId(JTextField jTextFieldId) {
         this.jTextFieldId = jTextFieldId;
     }
 
+    /**
+     * Vraća dugme za azuriranje rezervacije.
+     *
+     * @return JButton za azuriranje rezervacije.
+     */
     public JButton getjButtonAzuriraj() {
         return jButtonAzuriraj;
     }
 
+     /**
+     * Postavlja dugme za azuriranje rezervacije.
+     * 
+     * @param jButtonAzuriraj Novo dugme za azuriranje rezervacije.
+     */
     public void setjButtonAzuriraj(JButton jButtonAzuriraj) {
         this.jButtonAzuriraj = jButtonAzuriraj;
     }
 
+    /**
+     * Vraća dugme za brisanje rezervacije.
+     *
+     * @return JButton za brisanje rezervacije.
+     */
     public JButton getjButtonObrisi() {
         return jButtonObrisi;
     }
 
+     /**
+     * Postavlja dugme za brisanje rezervacije.
+     * 
+     * @param jButtonObrisi Novo dugme za brisanje rezervacije.
+     */
     public void setjButtonObrisi(JButton jButtonObrisi) {
         this.jButtonObrisi = jButtonObrisi;
     }

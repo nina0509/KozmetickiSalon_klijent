@@ -9,14 +9,19 @@ import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+
 /**
+ * Klasa koja predstavlja JFrame koji pruža korisnički interfejs za prijavu menadzera na sistem.
  *
- * @author ninic
+ * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class LoginForma extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LoginForma
+     /**
+     * Kreira novu formu LoginForma. Konstruktor inicijalizuje
+     * komponente korisničkog interfejsa.
+     *
      */
     public LoginForma() {
         initComponents();
@@ -111,36 +116,76 @@ public class LoginForma extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Metoda koja se poziva kada korisnik pritisne dugme za prijavu.
+    
+     * @param evt Događaj koji izaziva poziv metode.
+     */
     private void jButtonUlogujSeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUlogujSeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonUlogujSeActionPerformed
 
-    /**
-     * @param args the command line arguments
+    
+     /**
+     * Vraća dugme za prijavu na sistem.
+     *
+     * @return JButton za prijavu na sistem.
      */
    public JButton getjButtonUlogujSe() {
         return jButtonUlogujSe;
     }
 
+    /**
+     * Postavlja dugme za prijavu na sistem.
+     *
+     * @param jButtonUlogujSe Novo dugme za prijavu na sistem.
+     */
     public void setjButtonUlogujSe(JButton jButtonUlogujSe) {
         this.jButtonUlogujSe = jButtonUlogujSe;
     }
 
+     /**
+     * Vraća JPasswordField za unos lozinke menadzera.
+     *
+     * @return JPasswordField za unos lozinke menadzera.
+     */
     public JPasswordField getjPasswordField1() {
         return jPasswordField1;
     }
 
+     /**
+     * Postavlja JPasswordField za unos lozinke menadzera.
+     *
+     * @param jPasswordField1 Novi JPasswordField za unos lozinke menadzera.
+     */
     public void setjPasswordField1(JPasswordField jPasswordField1) {
         this.jPasswordField1 = jPasswordField1;
     }
 
+     /**
+     * Vraća tekstualno polje za unos korisnickog imena menadzera.
+     *
+     * @return JTextField za unos korisnickog imena menadzera.
+     */
     public JTextField getjTextFieldUsername() {
         return jTextFieldUsername;
     }
 
+    
+    /**
+     * Postavlja tekstualno polje za unos korisnickog imena menadzera.
+     *
+     * @param jTextFieldUsername Nov tekstualno polje za unos korisnickog imena menadzera
+     */
     public void setjTextFieldUsername(JTextField jTextFieldUsername) {
         this.jTextFieldUsername = jTextFieldUsername;
     }
+    
+    /**
+     * Dodaje ActionListener za dugme za prijavu menadzera.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
  public void loginAddActionListener(ActionListener actionListener) {
 
         jButtonUlogujSe.addActionListener(actionListener);

@@ -12,13 +12,19 @@ import javax.swing.JTextField;
 import javax.swing.event.ListSelectionListener;
 
 /**
+ * Klasa koja predstavlja JFrame koji pruža korisnički interfejs za pregled
+ * rezervacija.
  *
- * @author ninic
+ * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class PregledRezervacijaForma extends javax.swing.JFrame {
 
     /**
-     * Creates new form PregledRacunaForma
+     * Kreira novu formu PregledRezervacijaForma. Konstruktor inicijalizuje
+     * komponente korisničkog interfejsa i podešava ponašanje prozora prilikom
+     * zatvaranja.
+     *
      */
     public PregledRezervacijaForma() {
         initComponents();
@@ -175,14 +181,19 @@ public class PregledRezervacijaForma extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * @param args the command line arguments
+     * Vraća tabelu sa listom svih rezervacija.
+     *
+     * @return JTable sa listom rezervacija.
      */
     public JTable getjTableRezervacije() {
         return jTableRezervacije;
     }
 
     /**
-     * @param args the command line arguments
+     * Postavlja tabelu sa listom svih rezervacija.
+     *
+     *
+     * @param jTableRezervacije Nova JTable za prikaz liste rezervacija.
      */
     public void setjTableRezervacije(JTable jTableRezervacije) {
         this.jTableRezervacije = jTableRezervacije;
@@ -204,56 +215,112 @@ public class PregledRezervacijaForma extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldIme;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * Dodaje ActionListener na dugme za prikaz rezervacije.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonPrikaziActionListener(ActionListener actionListener) {
         jButtonPrikazi.addActionListener(actionListener);
 
     }
-
+/**
+     * Dodaje ActionListener na dugme za dodavanje rezervacije.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonDodajActionListener(ActionListener actionListener) {
         jButtonDodaj.addActionListener(actionListener);
 
     }
-
+    /**
+     * Dodaje ActionListener na dugme za pretragu rezervacija.
+     *
+     * @param actionListener ActionListener koji će biti dodat dugmetu.
+     */
     public void addButtonPretraziActionListener(ActionListener actionListener) {
         jButtonPretrazi.addActionListener(actionListener);
     }
 
+    /**
+     * Dodaje ListSelectionListener na tabelu sa svim rezervacijama.
+     *
+     * @param actionListener ListSelectionListener koji će biti dodat dugmetu.
+     */
     public void addRezervacijeActionListener(ListSelectionListener actionListener) {
         jTableRezervacije.getSelectionModel().addListSelectionListener(actionListener);
     }
 
+    /**
+     * Vraca tekstualno polje za unos datuma rezervacije.
+     *
+     * @return JTextField za unos datuma rezervacije.
+     */
     public JTextField getjTextFieldDatum() {
         return jTextFieldDatum;
     }
 
+     /**
+     * Postavlja tekstualno polje za unos datuma rezervacije.
+     *
+     * @param jTextFieldDatum Novi JTextField za unos datuma rezervacije.
+     */
     public void setjTextFieldDatum(JTextField jTextFieldDatum) {
         this.jTextFieldDatum = jTextFieldDatum;
     }
 
+     /**
+     * Vraća tekstualno polje za unos imena klijenta.
+     *
+     * @return JTextField za unos imena klijenta.
+     */
     public JTextField getjTextFieldIme() {
         return jTextFieldIme;
     }
 
+     /**
+     * Postavlja tekstualno polje za unos imena klijenta.
+     *
+     * @param jTextFieldIme Novo tekstualno polje za unos imena klijenta.
+     */
     public void setjTextFieldIme(JTextField jTextFieldIme) {
         this.jTextFieldIme = jTextFieldIme;
     }
 
+     /**
+     * Vraća dugme za pretrazivanje rezervacija.
+     *
+     * @return JButton dugme za pretrazivanje rezervacija.
+     */
     public JButton getjButtonPretrazi() {
         return jButtonPretrazi;
     }
-
+ /**
+     * Postavlja dugme za pretrazivanje rezervacija.
+     *
+     * @param jButtonPretrazi Novo dugme za pretrazivanje rezervacija.
+     */
     public void setjButtonPretrazi(JButton jButtonPretrazi) {
         this.jButtonPretrazi = jButtonPretrazi;
     }
 
+    /**
+     * Vraća tabelu sa listom svih stavki rezervacije.
+     *
+     * @return JTable sa listom svih stavki rezervacije.
+     */
     public JTable getjTableStavkeRez() {
         return jTableStavkeRez;
     }
 
+     /**
+     * Postavlja tabelu sa listom svih stavki rezervacije.
+     *
+     *
+     * @param jTableStavkeRez Nova JTable za prikaz liste svih stavki rezervacije.
+     */
     public void setjTableStavkeRez(JTable jTableStavkeRez) {
         this.jTableStavkeRez = jTableStavkeRez;
     }
 
-
-   
 }

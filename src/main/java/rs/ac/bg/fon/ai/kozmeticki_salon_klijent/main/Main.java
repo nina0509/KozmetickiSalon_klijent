@@ -8,11 +8,27 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.kontroler.glavni.GlavniKontroler
 
 
 /**
- *
- * @author ninic
+ * Glavna klasa aplikacije koja pokreće program i sadrzi main metodu.
+ * 
+ * @author Nikolina Baros
  */
 public class Main {
 
+    /**
+     * Podrazumevani konstruktor za klasu Main.
+     * Inicijalizuje klasu bez dodatnih parametara.
+     */
+    public Main() {
+      
+    }
+    /**
+     *
+     * Metod koji se prvi izvršava pri pokretanju aplikacije. Poziva se 
+     * Singleton instanca glavnog kontrolera aplikacije i otvara se
+     * login forma, omogućavajući korisniku da se prijavi na sistem.
+     * 
+     * @param args Argumenti komandne linije (ne koriste se u ovoj aplikaciji).
+     */
     public static void main(String[] args) {
 
         GlavniKontroler.getInstance().otvoriLoginFormu();
