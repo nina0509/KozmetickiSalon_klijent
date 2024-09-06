@@ -18,6 +18,7 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.kontroler.glavni.GlavniKontroler
  * 
  * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class GlavnaForma extends javax.swing.JFrame {
 
    
@@ -235,9 +236,6 @@ public class GlavnaForma extends javax.swing.JFrame {
            GlavniKontroler.getInstance().otvoriStatistikaRezervacijaFormu();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonOdjava;

@@ -17,6 +17,7 @@ import javax.swing.JPanel;
  *
  * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class StatistikaRezervacijaForma extends javax.swing.JFrame {
 
     /**

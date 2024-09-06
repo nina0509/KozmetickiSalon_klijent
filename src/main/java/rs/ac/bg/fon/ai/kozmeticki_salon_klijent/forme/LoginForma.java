@@ -15,6 +15,7 @@ import javax.swing.JTextField;
  *
  * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class LoginForma extends javax.swing.JFrame {
 
      /**

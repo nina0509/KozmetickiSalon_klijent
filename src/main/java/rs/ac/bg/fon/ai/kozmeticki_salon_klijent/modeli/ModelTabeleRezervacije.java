@@ -12,29 +12,55 @@ import javax.swing.table.AbstractTableModel;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Rezervacija;
 
 /**
- *
- * @author ninic
+ * Klasa koja predstavlja model tabele za prikaz podataka o rezervacijama sa kolonama: ID, datum, ukupna cena, pojavio se, ime klijenta, datum rodjenja klijenta .
+ * Nasleđuje AbstractTableModel i koristi se za prikaz liste rezervacija
+ * u tabelarnom obliku.
+ * 
+ * @author Nikolina Baros
  */
 public class ModelTabeleRezervacije extends AbstractTableModel {
-
+/**
+     * Lista rezervacija koja se prikazuje u tabeli.
+     */
     List<Rezervacija> lista;
+    /**
+     * Nazivi kolona u tabeli.
+     */
     String[] kolone = {"ID", "datum", "ukupna cena", "pojavio se", "ime klijenta", "datum rodjenja klijenta"};
-
+ /**
+     * Vraća broj redova u tabeli, tj. veličinu liste klijenata.
+     * 
+     * @return Broj redova u tabeli.
+     */
     @Override
     public int getRowCount() {
         return lista.size();
     }
-
+ /**
+     * Vraća broj kolona u tabeli.
+     * 
+     * @return Broj kolona.
+     */
     @Override
     public int getColumnCount() {
         return kolone.length;
     }
-
+    /**
+     * Konstruktor klase ModelTabeleRezervacije koji postavlja listu rezervacija za prikaz u tabeli.
+     * 
+     * @param lista Lista rezervacija koja će biti prikazana u tabeli.
+     */
     public ModelTabeleRezervacije(List<Rezervacija> lista) {
 
         this.lista = lista;
     }
-
+/**
+     * Vraća vrednost iz tabele na osnovu indeksa reda i kolone.
+     * 
+     * @param rowIndex Indeks reda.
+     * @param columnIndex Indeks kolone.
+     * @return Vrednost u datom redu i koloni.
+     */
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
 
@@ -66,17 +92,30 @@ public class ModelTabeleRezervacije extends AbstractTableModel {
         }
 
     }
-
+/**
+     * Vraća naziv kolone na osnovu njenog indeksa.
+     * 
+     * @param column Indeks kolone.
+     * @return Naziv kolone.
+     */
     @Override
     public String getColumnName(int column) {
 
         return kolone[column];
     }
-
+/**
+     * Vraća trenutnu listu rezervacija.
+     * 
+     * @return Lista rezervacija.
+     */
     public List<Rezervacija> getLista() {
         return lista;
     }
-
+/**
+     * Postavlja novu listu rezervacija u model tabele.
+     * 
+     * @param lista Nova lista rezervacija.
+     */
     public void setLista(List<Rezervacija> lista) {
         this.lista = lista;
     }

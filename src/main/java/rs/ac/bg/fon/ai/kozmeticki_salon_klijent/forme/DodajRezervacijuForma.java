@@ -22,6 +22,7 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
  *
  * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class DodajRezervacijuForma extends javax.swing.JFrame {
 
     /**

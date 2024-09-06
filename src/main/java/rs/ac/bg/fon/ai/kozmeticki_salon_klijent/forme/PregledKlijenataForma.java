@@ -16,6 +16,7 @@ import javax.swing.JTextField;
  *
  * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class PregledKlijenataForma extends javax.swing.JFrame {
 
     /**

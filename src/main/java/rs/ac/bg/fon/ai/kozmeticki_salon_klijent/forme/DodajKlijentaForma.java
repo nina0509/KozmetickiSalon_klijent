@@ -16,6 +16,8 @@ import javax.swing.JTextField;
  *
  * @author Nikolina Baros
  */
+
+@SuppressWarnings("unused") 
 public class DodajKlijentaForma extends javax.swing.JFrame {
 
     /**
@@ -29,7 +31,7 @@ public class DodajKlijentaForma extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
-    @SuppressWarnings("unchecked")
+  
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -188,13 +190,18 @@ public class DodajKlijentaForma extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+  /**
+     * Definise akciju u slucaju promene tekstualnog polja za unos broja telefona.
+     * 
+     * @param evt Dogadjaj promene teksta u tekstualnom polju.
+     *
+     */
     private void jTextFieldBrTelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBrTelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldBrTelActionPerformed
 
   
-
+  @SuppressWarnings("unchecked")
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAzuriraj;
     private javax.swing.JButton jButtonDodajKlijenta;

@@ -17,6 +17,7 @@ import javax.swing.event.ListSelectionListener;
  *
  * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class PregledRezervacijaForma extends javax.swing.JFrame {
 
     /**

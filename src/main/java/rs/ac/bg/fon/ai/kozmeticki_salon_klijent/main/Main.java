@@ -15,6 +15,13 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.kontroler.glavni.GlavniKontroler
 public class Main {
 
     /**
+     * Podrazumevani konstruktor za klasu Main.
+     * Inicijalizuje klasu bez dodatnih parametara.
+     */
+    public Main() {
+      
+    }
+    /**
      *
      * Metod koji se prvi izvršava pri pokretanju aplikacije. Poziva se 
      * Singleton instanca glavnog kontrolera aplikacije i otvara se

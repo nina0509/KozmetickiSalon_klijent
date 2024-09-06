@@ -18,6 +18,7 @@ import javax.swing.JTextField;
  *
  * @author Nikolina Baros
  */
+@SuppressWarnings("unused") 
 public class PregledUslugaForma extends javax.swing.JFrame {
 
     /**
