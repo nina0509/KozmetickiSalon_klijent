@@ -17,6 +17,7 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Klijent;
  * 
  * @author Nikolina Baros
  */
+
 public class ModelTabeleKlijentTest extends TestCase {
     private ModelTabeleKlijent modelTabeleKlijent;
     private List<Klijent> klijenti;
