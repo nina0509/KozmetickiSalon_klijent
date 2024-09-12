@@ -90,8 +90,8 @@ public class PregledUslugaKontroler {
                 TipUsluge tip = (TipUsluge) puf.getjComboBoxTipovi().getSelectedItem();
 
                 Usluga u = new Usluga();
-                u.setNaziv(naziv);
-                u.setTip(tip);
+                if(naziv!=null && !naziv.isBlank())u.setNaziv(naziv);
+                if(tip!=null)u.setTip(tip);
                 List<Usluga> pretraga = Komunikacija.getInstance().nadjiUsluge(u);
                 ModelTabeleUsluga mtu = (ModelTabeleUsluga) puf.getjTableUsluge().getModel();
                 mtu.setLista(pretraga);

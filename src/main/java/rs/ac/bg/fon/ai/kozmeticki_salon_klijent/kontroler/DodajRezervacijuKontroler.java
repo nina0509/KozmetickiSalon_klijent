@@ -212,7 +212,7 @@ public class DodajRezervacijuKontroler {
 
                     int cena = Integer.parseInt(drf.getjTextFieldCenaUsluge().getText());
 
-                    StavkaRezervacije sr = new StavkaRezervacije(-1, null, vrPoc, vrZav, cena, u);
+                    StavkaRezervacije sr = new StavkaRezervacije(0, new Rezervacija(), vrPoc, vrZav, cena, u);
                     ((ModelTabeleStavkeRezervacije) drf.getjTableStavkeRez().getModel()).dodajStavku(sr);
 
                     int ukCena = Integer.parseInt(drf.getjTextFieldUkupnaCena().getText());
@@ -272,7 +272,7 @@ public class DodajRezervacijuKontroler {
                     Klijent k = (Klijent) drf.getjComboBoxKlijent().getSelectedItem();
                     List<StavkaRezervacije> stavke = ((ModelTabeleStavkeRezervacije) drf.getjTableStavkeRez().getModel()).getLista();
                     int ukCena = Integer.parseInt(drf.getjTextFieldUkupnaCena().getText());
-                    Rezervacija r = new Rezervacija(-1, datum, ukCena, true, k);
+                    Rezervacija r = new Rezervacija(0, datum, ukCena, true, k);
                     r.setStavke(stavke);
                     Komunikacija.getInstance().sacuvajRezervaciju(r);
                     JOptionPane.showMessageDialog(drf, "Sistem je zapamtio rezervaciju", "Uspesno", JOptionPane.INFORMATION_MESSAGE);

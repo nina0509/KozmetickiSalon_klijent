@@ -90,7 +90,7 @@ public class DodajUsluguKontroler {
                     int cena = Integer.parseInt(duf.getjTextFieldCena().getText().trim());
                     TipUsluge tip = (TipUsluge) duf.getjComboBoxTipUsluge().getSelectedItem();
 
-                    Usluga u = new Usluga(-1, naziv, trajanje, cena, tip);
+                    Usluga u = new Usluga(0, naziv, trajanje, cena, tip);
 
                     try {
                         Komunikacija.getInstance().sacuvajUslugu(u);

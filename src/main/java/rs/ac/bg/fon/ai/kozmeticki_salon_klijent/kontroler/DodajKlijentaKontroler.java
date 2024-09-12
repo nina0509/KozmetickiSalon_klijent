@@ -76,7 +76,7 @@ public class DodajKlijentaKontroler {
                     SimpleDateFormat date = new SimpleDateFormat("dd.MM.yyyy");
                     Date datum = date.parse(dkf.getjTextFieldDatum().getText().trim());
 
-                    Klijent k = new Klijent(-1, ime, prezime, brTel, datum);
+                    Klijent k = new Klijent(0, ime, prezime, brTel, datum);
                      k.setBrTel(k.getBrTel().replace(" ", ""));
                     try {
                         Komunikacija.getInstance().sacuvajKlijenta(k);

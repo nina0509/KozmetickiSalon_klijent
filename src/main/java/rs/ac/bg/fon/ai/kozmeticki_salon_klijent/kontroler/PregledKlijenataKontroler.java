@@ -76,8 +76,8 @@ public class PregledKlijenataKontroler {
                 String ime = pkf.getjTextFieldIme().getText().trim();
                 String prezime = pkf.getjTextFieldPrezime().getText().trim();
                 Klijent k=new Klijent();
-                k.setIme(ime); 
-                k.setPrezime(prezime);
+               if(ime!=null && !ime.isBlank() && ime.length()>2) k.setIme(ime); 
+               if(prezime!=null && !prezime.isBlank() && prezime.length()>2) k.setPrezime(prezime);
                 
                 List<Klijent> pretraga=Komunikacija.getInstance().nadjiKlijente(k);
                 ModelTabeleKlijent mtk = (ModelTabeleKlijent) pkf.getjTableKlijenti().getModel();

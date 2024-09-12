@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import javax.swing.event.ListSelectionEvent;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -110,8 +109,8 @@ public class PregledRezervacijaKontroler {
                             
                     Rezervacija pret=new Rezervacija();
                     pret.setKlijent(new Klijent());
-                    pret.getKlijent().setIme(ime);
-                    pret.setDatum(datum);
+                   if(ime!=null && !ime.isBlank() && ime.length()>2) pret.getKlijent().setIme(ime);
+                   if(datum!=null) pret.setDatum(datum);
                     
                     List<Rezervacija> pretraga=Komunikacija.getInstance().nadjiRezervacije(pret);
                     ModelTabeleRezervacije mtr = (ModelTabeleRezervacije) prf.getjTableRezervacije().getModel();
