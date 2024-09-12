@@ -7,7 +7,11 @@ package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Klijent;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Popust;
@@ -19,7 +23,7 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
  *
  * @author Nikolina Baros
  */
-public class ModelTabelePopustTest extends TestCase {
+public class ModelTabelePopustTest  {
 
     private ModelTabelePopust modelTabelePopust;
     private List<Popust> popusti;
@@ -27,12 +31,10 @@ public class ModelTabelePopustTest extends TestCase {
     private Klijent klijent;
     private Usluga usluga1, usluga2;
 
-    public ModelTabelePopustTest(String testName) {
-        super(testName);
-    }
+    
 
-    @Override
-    protected void setUp() throws Exception {
+    @BeforeEach
+    public void setUp() throws Exception {
         klijent = new Klijent(1, "Nikola", "Nikolic", "065123456", new Date());
         TipUsluge tip = new TipUsluge(1, "tip1");
         usluga1 = new Usluga(1, "Masaža", 120, 1200, tip);
@@ -45,8 +47,8 @@ public class ModelTabelePopustTest extends TestCase {
         modelTabelePopust = new ModelTabelePopust(popusti);
     }
 
-    @Override
-    protected void tearDown() throws Exception {
+    @AfterEach
+    public void tearDown() throws Exception {
         modelTabelePopust = null;
         List<Popust> popusti = null;
         klijent = null;

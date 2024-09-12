@@ -8,7 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Klijent;
 
@@ -18,23 +20,21 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Klijent;
  * @author Nikolina Baros
  */
 
-public class ModelTabeleKlijentTest extends TestCase {
+public class ModelTabeleKlijentTest {
     private ModelTabeleKlijent modelTabeleKlijent;
     private List<Klijent> klijenti;
-    public ModelTabeleKlijentTest(String testName) {
-        super(testName);
-    }
+   
     
-    @Override
-    protected void setUp() throws Exception {
+    @BeforeEach
+    public void setUp() throws Exception {
        klijenti = new ArrayList<>();
         klijenti.add(new Klijent(1, "Nikola", "Nikolic", "065123456", new Date()));
         klijenti.add(new Klijent(2, "Marko", "Markovic", "064987654", new Date()));
         modelTabeleKlijent = new ModelTabeleKlijent(klijenti);
     }
     
-    @Override
-    protected void tearDown() throws Exception {
+    @AfterEach
+    public void tearDown() throws Exception {
       modelTabeleKlijent=null;
       klijenti=null;
     }

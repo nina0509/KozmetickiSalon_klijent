@@ -6,7 +6,9 @@ package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli;
 
 import java.util.ArrayList;
 import java.util.List;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.TipUsluge;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
@@ -16,18 +18,14 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
  * 
  * @author Nikolina Baros
  */
-public class ModelTabeleUslugaTest extends TestCase {
+public class ModelTabeleUslugaTest {
      private ModelTabeleUsluga modelTabeleUsluga;
     private List<Usluga> usluge;
     private TipUsluge tip1;
     private TipUsluge tip2;
 
-    public ModelTabeleUslugaTest(String testName) {
-        super(testName);
-    }
-    
-    @Override
-    protected void setUp() throws Exception {
+    @BeforeEach
+    public void setUp() throws Exception {
          tip1 = new TipUsluge(1, "Masaža");
         tip2 = new TipUsluge(2, "Nega lica");
 
@@ -38,8 +36,8 @@ public class ModelTabeleUslugaTest extends TestCase {
         modelTabeleUsluga = new ModelTabeleUsluga(usluge);
     }
     
-    @Override
-    protected void tearDown() throws Exception {
+    @AfterEach
+    public void tearDown() throws Exception {
         modelTabeleUsluga=null;
         usluge=null;
         tip1=null;

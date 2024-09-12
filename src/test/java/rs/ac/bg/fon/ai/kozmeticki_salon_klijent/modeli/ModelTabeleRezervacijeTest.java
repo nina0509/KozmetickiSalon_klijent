@@ -8,7 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Klijent;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Rezervacija;
@@ -18,19 +20,16 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Rezervacija;
  * 
  * @author Nikolina Baros
  */
-public class ModelTabeleRezervacijeTest extends TestCase {
+public class ModelTabeleRezervacijeTest {
     private ModelTabeleRezervacije modelTabeleRezervacije;
     private List<Rezervacija> rezervacije;
     private Klijent klijent;
     private SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy.");
     
     
-    public ModelTabeleRezervacijeTest(String testName) {
-        super(testName);
-    }
     
-    @Override
-    protected void setUp() throws Exception {
+    @BeforeEach
+    public void setUp() throws Exception {
        klijent = new Klijent(1, "Nikola", "Nikolic", "065123456", sdf.parse("10.02.1990."));
         
         rezervacije = new ArrayList<>();
@@ -40,8 +39,8 @@ public class ModelTabeleRezervacijeTest extends TestCase {
         modelTabeleRezervacije = new ModelTabeleRezervacije(rezervacije);
     }
     
-    @Override
-    protected void tearDown() throws Exception {
+    @AfterEach
+    public void tearDown() throws Exception {
         rezervacije=null;
         klijent=null;
         modelTabeleRezervacije=null;

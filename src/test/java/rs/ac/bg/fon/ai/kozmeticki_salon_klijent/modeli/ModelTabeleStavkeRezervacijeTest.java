@@ -7,10 +7,11 @@ package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-import junit.framework.TestCase;
+import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.forme.TipForme;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Rezervacija;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.StavkaRezervacije;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.TipUsluge;
@@ -21,17 +22,15 @@ import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
  * 
  * @author Nikolina Baros
  */
-public class ModelTabeleStavkeRezervacijeTest extends TestCase {
+public class ModelTabeleStavkeRezervacijeTest{
     private ModelTabeleStavkeRezervacije modelTabeleStavkeRezervacije;
     private List<StavkaRezervacije> stavke;
     private Usluga usluga1;
     private Usluga usluga2;
-    public ModelTabeleStavkeRezervacijeTest(String testName) {
-        super(testName);
-    }
+   
     
-    @Override
-    protected void setUp() throws Exception {
+    @BeforeEach
+    public void setUp() throws Exception {
         
         usluga1 = new Usluga(1, "Manikir", 100,1000,new TipUsluge(1,"Manikir"));
         usluga2 = new Usluga(2, "Pedikir", 150,1500,new TipUsluge(2,"Pedikir"));
@@ -43,8 +42,8 @@ public class ModelTabeleStavkeRezervacijeTest extends TestCase {
         modelTabeleStavkeRezervacije = new ModelTabeleStavkeRezervacije(stavke);
     }
     
-    @Override
-    protected void tearDown() throws Exception {
+    @AfterEach
+    public void tearDown() throws Exception {
        modelTabeleStavkeRezervacije=null;
        stavke=null;
        usluga1=null;
