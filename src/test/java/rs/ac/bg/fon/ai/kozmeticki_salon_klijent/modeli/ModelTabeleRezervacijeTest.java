@@ -34,8 +34,8 @@ public class ModelTabeleRezervacijeTest extends TestCase {
        klijent = new Klijent(1, "Nikola", "Nikolic", "065123456", sdf.parse("10.02.1990."));
         
         rezervacije = new ArrayList<>();
-        rezervacije.add(new Rezervacija(1, sdf.parse("05.09.2024."), 3000, true, klijent));
-        rezervacije.add(new Rezervacija(2, sdf.parse("06.09.2024."), 5000, false, klijent));
+        rezervacije.add(new Rezervacija(1, sdf.parse("05.09.2025."), 3000, true, klijent));
+        rezervacije.add(new Rezervacija(2, sdf.parse("06.09.2025."), 5000, false, klijent));
         
         modelTabeleRezervacije = new ModelTabeleRezervacije(rezervacije);
     }
@@ -61,14 +61,14 @@ public class ModelTabeleRezervacijeTest extends TestCase {
     @Test
     public void testGetValueAt() throws Exception {
         assertEquals(1, modelTabeleRezervacije.getValueAt(0, 0));
-        assertEquals("05.09.2024.", modelTabeleRezervacije.getValueAt(0, 1));
+        assertEquals("05.09.2025.", modelTabeleRezervacije.getValueAt(0, 1));
         assertEquals(3000, modelTabeleRezervacije.getValueAt(0, 2));
         assertEquals("da", modelTabeleRezervacije.getValueAt(0, 3));
         assertEquals("Nikola Nikolic", modelTabeleRezervacije.getValueAt(0, 4));
         assertEquals("10.02.1990.", modelTabeleRezervacije.getValueAt(0, 5));
 
         assertEquals(2, modelTabeleRezervacije.getValueAt(1, 0));
-        assertEquals("06.09.2024.", modelTabeleRezervacije.getValueAt(1, 1));
+        assertEquals("06.09.2025.", modelTabeleRezervacije.getValueAt(1, 1));
         assertEquals(5000, modelTabeleRezervacije.getValueAt(1, 2));
         assertEquals("ne", modelTabeleRezervacije.getValueAt(1, 3));
         assertEquals("Nikola Nikolic", modelTabeleRezervacije.getValueAt(1, 4));

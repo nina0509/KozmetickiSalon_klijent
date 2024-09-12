@@ -5,6 +5,7 @@
 package rs.ac.bg.fon.ai.kozmeticki_salon_klijent.modeli;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
@@ -32,7 +33,7 @@ public class ModelTabelePopustTest extends TestCase {
 
     @Override
     protected void setUp() throws Exception {
-        klijent = new Klijent(1, "Nikola", "Nikolic", "065123456", null);
+        klijent = new Klijent(1, "Nikola", "Nikolic", "065123456", new Date());
         TipUsluge tip = new TipUsluge(1, "tip1");
         usluga1 = new Usluga(1, "Masaža", 120, 1200, tip);
         usluga2 = new Usluga(2, "Manikir", 120, 1200, tip);

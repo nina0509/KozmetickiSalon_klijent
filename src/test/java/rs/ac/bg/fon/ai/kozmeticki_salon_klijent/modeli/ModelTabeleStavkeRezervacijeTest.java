@@ -11,6 +11,7 @@ import junit.framework.TestCase;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 import rs.ac.bg.fon.ai.kozmeticki_salon_klijent.forme.TipForme;
+import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Rezervacija;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.StavkaRezervacije;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.TipUsluge;
 import rs.ac.bg.fon.ai.kozmeticki_salon_zajednicki.domen.Usluga;
@@ -36,8 +37,8 @@ public class ModelTabeleStavkeRezervacijeTest extends TestCase {
         usluga2 = new Usluga(2, "Pedikir", 150,1500,new TipUsluge(2,"Pedikir"));
 
         stavke = new ArrayList<>();
-        stavke.add(new StavkaRezervacije(1, null,LocalTime.of(10, 0), LocalTime.of(11, 0), 1000, usluga1));
-        stavke.add(new StavkaRezervacije(2,null, LocalTime.of(11, 0), LocalTime.of(12, 0), 1500, usluga2));
+        stavke.add(new StavkaRezervacije(1, new Rezervacija(),LocalTime.of(10, 0), LocalTime.of(11, 0), 1000, usluga1));
+        stavke.add(new StavkaRezervacije(2,new Rezervacija(), LocalTime.of(11, 0), LocalTime.of(12, 0), 1500, usluga2));
 
         modelTabeleStavkeRezervacije = new ModelTabeleStavkeRezervacije(stavke);
     }
@@ -79,7 +80,7 @@ public class ModelTabeleStavkeRezervacijeTest extends TestCase {
     @Test
     public void testSetLista() {
         List<StavkaRezervacije> novaLista = new ArrayList<>();
-        novaLista.add(new StavkaRezervacije(3,null, LocalTime.of(13, 0), LocalTime.of(14, 0), 2000, usluga1));
+        novaLista.add(new StavkaRezervacije(3,new Rezervacija(), LocalTime.of(13, 0), LocalTime.of(14, 0), 2000, usluga1));
         modelTabeleStavkeRezervacije.setLista(novaLista);
         assertEquals(1, modelTabeleStavkeRezervacije.getRowCount());
         assertEquals(3, modelTabeleStavkeRezervacije.getValueAt(0, 0));
@@ -87,7 +88,7 @@ public class ModelTabeleStavkeRezervacijeTest extends TestCase {
 
     @Test
     public void testDodajStavku() throws Exception {
-        StavkaRezervacije novaStavka = new StavkaRezervacije(3,null, LocalTime.of(12, 0), LocalTime.of(13, 0), 2000, usluga1);
+        StavkaRezervacije novaStavka = new StavkaRezervacije(3,new Rezervacija(), LocalTime.of(12, 0), LocalTime.of(13, 0), 2000, usluga1);
         modelTabeleStavkeRezervacije.dodajStavku(novaStavka);
         assertEquals(3, modelTabeleStavkeRezervacije.getRowCount());
         assertEquals(3, modelTabeleStavkeRezervacije.getValueAt(2, 0));
@@ -95,7 +96,7 @@ public class ModelTabeleStavkeRezervacijeTest extends TestCase {
 
     @Test
     public void testDodajStavkuTerminPreklapanje() {
-        StavkaRezervacije preklapajucaStavka = new StavkaRezervacije(3,null, LocalTime.of(10, 30), LocalTime.of(11, 30), 2000, usluga1);
+        StavkaRezervacije preklapajucaStavka = new StavkaRezervacije(3,new Rezervacija(), LocalTime.of(10, 30), LocalTime.of(11, 30), 2000, usluga1);
         Exception exception = assertThrows(Exception.class, () -> {
             modelTabeleStavkeRezervacije.dodajStavku(preklapajucaStavka);
         });
